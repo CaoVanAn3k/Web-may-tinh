@@ -1,0 +1,1005 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --background-heading: #515154;
+    --background-body: #f5f5f7;
+    --background-white: #ffffff;
+    --color-green: #65b240;
+    --color-white: #fff;
+    --color-heading: #d2d2d7;
+    --background-hover-heading: #3f3f3f;
+    --color-h2: #1d1d1f;
+    --box-shadow: 1px 1px 28px 0px rgb(0 0 0 / 12%);
+    --border: 1px solid #0066cc;
+    --color-86: #86868b;
+}
+
+
+/* ========** start css shared **========= */
+
+html {
+    text-decoration: none;
+    font-size: 62.5%;
+    font-family: "Roboto", sans-serif;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #f5f5f7;
+}
+
+.heading {
+    text-align: center;
+    cursor: pointer;
+}
+
+.heading h2 {
+    color: var(--color-h2);
+    font-size: 36px;
+    font-weight: 600;
+    padding-bottom: 32px;
+    margin-bottom: -0.5rem;
+}
+
+.del {
+    text-decoration: line-through;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.under {
+    text-decoration: underline;
+}
+
+
+/* ========** start css sẵn sàng **========= */
+
+.ready {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    line-height: 1;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #491b69;
+    color: var(--color-white);
+    right: 10px;
+    top: 14px;
+    border-radius: 8px;
+}
+
+.ready p {
+    margin-bottom: -0.1rem;
+    text-transform: uppercase;
+}
+
+
+/* ========** ends css sẵn sàng **========= */
+
+
+/* ========** start css mừng khai trương **========= */
+
+.grand {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    line-height: 1;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: #e26917;
+    color: var(--color-white);
+    right: 10px;
+    top: 14px;
+    border-radius: 8px;
+}
+
+.grand p {
+    margin-bottom: -0.1rem;
+    text-transform: uppercase;
+}
+
+
+/* ========** ends css mừng khai trương **========= */
+
+
+/* ========** start css mừng đặt cọc **========= */
+
+.deposit {
+    position: absolute;
+    width: 69px;
+    height: 30px;
+    line-height: 26px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 10px;
+    top: 14px;
+    border-radius: 8px;
+    color: #339901;
+    border: 1px solid #339901;
+    font-weight: 700;
+}
+
+.deposit span {
+    font-size: 1.6rem;
+}
+
+.deposit p {
+    margin-bottom: -0.1rem;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+}
+
+
+/* ========** ends css mừng đặt cọc **========= */
+
+
+/* ========** start css mừng hot sale **========= */
+
+.sale {
+    position: absolute;
+    width: 114px;
+    height: 34px;
+    line-height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #f96a3d;
+    color: var(--color-white);
+    right: 10px;
+    top: 14px;
+    border-radius: 8px;
+}
+
+.sale p {
+    margin-bottom: -0.1rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.sale span {
+    font-size: 1.6rem;
+    margin-right: 0.3rem;
+}
+
+
+/* ========** ends css mừng hot sale **========= */
+
+
+/* ========** start css mừng bán chạy **========= */
+
+.selling {
+    position: absolute;
+    width: 114px;
+    height: 34px;
+    line-height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #ffb700;
+    color: var(--color-white);
+    right: 10px;
+    top: 14px;
+    border-radius: 8px;
+}
+
+.selling p {
+    margin-bottom: -0.1rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.selling span {
+    font-size: 1.6rem;
+    margin-right: 0.3rem;
+}
+
+
+/* ========** ends css mừng bán chạy **========= */
+
+
+/* ========** Ends css shared **========= */
+
+
+/* ========** start css heading **========= */
+
+.main__heading {
+    background-color: rebeccapurple;
+    background-color: var(--background-heading);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.heading__menu {
+    width: 88%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+}
+
+.heading__menu__main {
+    display: none;
+    cursor: pointer;
+}
+
+.heading__menu__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-heading);
+}
+
+
+/* ========** start css thanh menu icon **========= */
+
+.left__list__p {
+    font-size: 1.5rem;
+    color: var(--color-h2);
+    font-weight: 400;
+}
+
+.left__list__ul {
+    font-size: 1.4rem;
+    color: var(--color-86);
+}
+
+.left__list__ul li {
+    margin-bottom: 1rem;
+}
+
+
+/* ========** ends css thanh menu icon **========= */
+
+.logo__shopdunk:hover {
+    cursor: pointer;
+}
+
+.heading__menu__table {
+    display: flex;
+    padding: 2rem;
+    font-size: 1.6rem;
+}
+
+.heading__menu__table__main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.table__main__list a:hover {
+    /* padding: 2rem; */
+    background-color: var(--background-hover-heading);
+    color: var(--color-heading);
+}
+
+.table__main__list a {
+    padding: 2rem;
+    font-weight: 100;
+    color: var(--color-heading);
+}
+
+.heading__main__icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-heading);
+}
+
+.heading__main__icon__list {
+    padding: 0 2rem;
+}
+
+.heading__main__icon__list:hover {
+    cursor: pointer;
+}
+
+
+/* ========** Ends css heading **========= */
+
+
+/* ========** stacts css menu-shoppe **========= */
+
+.main__shop__right {
+    position: fixed;
+    right: 0;
+    top: 0;
+    /* float: right; */
+    height: 100vh;
+    width: 25%;
+    background-color: #fff;
+    z-index: 1000;
+    display: none;
+}
+
+.main__shop__right__close {
+    float: right;
+    margin: 2rem 1rem 0 0;
+    cursor: pointer;
+}
+
+.main__shop__right__content {
+    margin: 5rem 0 0 2rem;
+}
+
+.main__shop__right__content p {
+    font-size: 1.5rem;
+    flex-wrap: wrap;
+}
+
+
+/* ========** ends css menu-shoppe **========= */
+
+
+/* ========** start css Sign **========= */
+
+.main__team {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.main__team__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4rem 0;
+    margin-top: 15rem;
+}
+
+.main__team__list {
+    width: 32%;
+}
+
+
+/* ========** ends css Sign **========= */
+
+
+/* ========** start css iPhone,iPac,Mac **========= */
+
+.main-curor {
+    cursor: pointer;
+}
+
+.lab-main {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 5rem;
+}
+
+.lab-body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 0.4rem;
+}
+
+.lab-menu {
+    border-radius: 8px;
+    background-color: var(--background-white);
+    margin-bottom: 3.2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.lab-menu:hover {
+    box-shadow: var(--box-shadow);
+}
+
+.menu-list {
+    position: relative;
+    padding-top: 23px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.lab-img {
+    padding: 47px 20px 40px;
+}
+
+.lab-img img {
+    margin-top: 19px;
+}
+
+.lab-content {
+    margin-left: 1.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.lab-content h3 {
+    padding-bottom: 2.2rem;
+}
+
+.lab-content b {
+    font-size: 1.5rem;
+    color: #0066cc;
+}
+
+.lab-content p {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+
+/* ========** ends css iPhone,iPac,Mac **========= */
+
+
+/* ========** start css button **========= */
+
+.main-button {
+    margin-bottom: 5rem;
+}
+
+.button-link {
+    display: flex;
+    justify-content: center;
+}
+
+.button-link a {
+    padding: 11px 24px;
+    border-radius: 15px;
+    border: var(--border);
+    display: flex;
+    align-items: center;
+    transition: all 0.6s linear;
+}
+
+.button-link span {
+    font-size: 1.5rem;
+}
+
+.button-link a:hover {
+    background-color: #0066cc;
+    color: var(--color-white);
+}
+
+
+/* ========** ends css button **========= */
+
+
+/* ========** start css service **========= */
+
+.service__menu__list {
+    padding: 0;
+}
+
+.service__menu__list__img {
+    padding: 0;
+}
+
+.service__menu__list__img img {
+    margin: 0;
+}
+
+.service__menu__list__content {
+    text-align: center;
+}
+
+
+/* ========** ends css service **========= */
+
+
+/* ========** start css back **========= */
+
+.main__back {
+    margin-top: 80px;
+}
+
+.main__back__img {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.main__back__img img {
+    border-radius: 10px;
+}
+
+
+/* ========** ends css back **========= */
+
+
+/* ========** start css news **========= */
+
+.main__news__menu {
+    border-radius: 16px;
+}
+
+.news__menu__list {
+    padding: 0;
+}
+
+.news__menu__list__img {
+    padding: 0;
+}
+
+.news__menu__list__img img {
+    margin: 0;
+    border-radius: 16px 16px 0 0;
+}
+
+.news__menu__list__content p {
+    color: #86868b;
+    font-size: 1.5rem;
+}
+
+
+/* ========** ends css news **========= */
+
+
+/* ========** start css information **========= */
+
+.main__information {
+    width: 100%;
+    background-color: #1d1d1f;
+}
+
+.main__information__nav {
+    display: grid;
+    grid-template-columns: 0.7fr 2.3fr;
+    padding-top: 5rem;
+    width: 90%;
+    margin: 0 auto;
+    grid-gap: 30px;
+}
+
+.main__information__internet {
+    float: left;
+}
+
+.main__information__content {
+    display: grid;
+    grid-template-columns: 0.5fr 0.6fr 0.6fr 0.6fr;
+}
+
+.information__internet__img {
+    width: 185px;
+    height: 50px;
+}
+
+.information__internet__content {
+    padding: 18px 4px 18px 0;
+    line-height: 24px;
+    margin: 0 0 -20px;
+}
+
+.information__internet__content p {
+    font-size: 1.4rem;
+    color: #d2d2d7;
+    margin: 0 0 24px;
+    line-height: 24px;
+}
+
+.information__internet__logo {
+    display: flex;
+}
+
+.logo-list {
+    margin-right: 1rem;
+    width: 42px;
+    height: 42px;
+}
+
+.logo-list:hover {
+    cursor: pointer;
+}
+
+.logo-list img {
+    border-radius: 50%;
+}
+
+.content__list__menu.active {
+    display: flex;
+    flex-direction: colum;
+    animation: animo 2s linear;
+}
+
+@keyframes animo {
+    0% {
+        /* transform: translateY(0); */
+        top: 0;
+    }
+    100% {
+        /* transform: translateY(20%); */
+        top: 20px;
+    }
+}
+
+.information__content__list h5 {
+    color: #d2d2d7;
+    line-height: 26px;
+    font-weight: 600;
+    padding-bottom: 2rem;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+}
+
+.content__list__menu-fix {
+    display: flex;
+    flex-direction: column;
+}
+
+.content__list__menu a {
+    position: relative;
+    color: #86868b;
+    text-decoration: none;
+    padding-bottom: 4px;
+    /* width: 100px; */
+    font-size: 1.5rem;
+}
+
+.content__list__menu a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    transform-origin: top left;
+}
+
+@keyframes identifier {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.content__list__menu a:hover::before {
+    background-color: #86868b;
+    animation: identifier 1s ease;
+}
+
+.span-sdt {
+    color: #0066cc;
+}
+
+.main__information__conclude {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 64px 0 32px 0;
+}
+
+.information__conclude__content {
+    color: #86868b;
+    font-size: 1.4rem;
+    line-height: 20px;
+}
+
+.information__conclude__content p {
+    margin: 0;
+}
+
+.information__conclude__logo {
+    width: 13rem;
+    cursor: pointer;
+    height: 3.9rem;
+}
+
+.main__information__conclude::before {
+    position: relative;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    margin-top: 32px;
+    top: -5px;
+    background-color: #86868b;
+}
+
+
+/* ========** ends css information **========= */
+
+
+/* ========** stacts css menu-icon **========= */
+
+.main__menu__left {
+    height: 100vh;
+    background-color: var(--color-white);
+    box-shadow: 1px 1px 5px rgb(0 0 0 / 50%);
+    padding: 2.5rem 2rem 3rem;
+    display: none;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    width: 100vw;
+}
+
+.main__menu__left__icon {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.main__icon__left__icon__clear {
+    cursor: pointer;
+}
+
+.main__menu__left__icon span {
+    padding: 1rem;
+}
+
+.main__menu__left__content {
+    padding: 0 30px;
+}
+
+.main__menu__left__list {
+    padding: 1rem;
+}
+
+.main__menu__left__list a {
+    font-size: 1.5rem;
+    color: var(--color-h2);
+    font-weight: 400;
+}
+
+
+/* ========** ends css menu-icon **========= */
+
+
+/* ========** stact css menu-search **========= */
+
+.heading__main__search {
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    position: absolute;
+    left: 20%;
+    width: 100%;
+    top: 6rem;
+    /* background-image: linear-gradient( 180deg, #1d1d1f 70px, #1d1d1fc4 0%) !important; */
+    display: none;
+}
+
+.heading__main__search__menu {
+    border-radius: 1rem;
+    width: 58%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main__search__menu__content {
+    display: flex;
+}
+
+.close-input {
+    color: var(--color-white);
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    align-items: center;
+    background-color: var(--background-hover-heading);
+}
+
+.heading__main__search__menu input {
+    height: 50px;
+    color: white;
+    display: flex;
+    justify-content: start;
+    font-size: 1.5rem;
+    width: 100%;
+    outline: none;
+    padding: 0 1rem;
+    background-color: var(--background-hover-heading);
+}
+
+.heading__main_-search__menu__content {
+    display: flex;
+    flex-direction: column;
+    height: 209px;
+    background-color: var(--color-white);
+}
+
+.heading__main_-search__menu__content h4 {
+    font-size: 1.6rem;
+    color: var(--color-h2);
+    margin-top: 1rem;
+    padding-left: 1rem;
+}
+
+.search-product {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    font-size: 1.4rem;
+    background-color: var(--color-white);
+    margin-top: 1rem;
+}
+
+.search-product a {
+    padding: 0.7rem 0 0.7rem 1rem;
+    font-weight: 400;
+    border-radius: 0.7rem;
+    color: var(--color-86);
+}
+
+.search-product a:hover {
+    background-color: var(--background-body);
+}
+
+
+/* ========** ends css menu-search **========= */
+
+@media (max-width: 768px) {
+    .content__list__menu {
+        display: none;
+    }
+    .main__information__content {
+        grid-template-columns: 1fr;
+    }
+    .information__content__list {
+        border-bottom: 1px solid var(--background-heading);
+    }
+    .information__content__list__menu {
+        display: flex;
+        justify-content: space-between;
+    }
+    .content__list__menu__span span:nth-child(2) {
+        display: flex;
+        position: absolute;
+        justify-content: space-between;
+        /* margin-top: 2rem; */
+        margin-left: -2rem;
+        display: none;
+    }
+    .information__content__list span {
+        color: var(--color-white);
+    }
+    .main__information__conclude::before {
+        width: 0;
+    }
+    .information__content__list h5 {
+        padding-bottom: 1rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .none-list {
+        display: none;
+    }
+    .main__team {
+        width: 96%;
+    }
+    .lab-main {
+        width: 96%;
+    }
+    .main__back__img {
+        width: 96%;
+    }
+    .main__information__nav {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 96%;
+    }
+    .information__internet__img {
+        width: 350px;
+        height: 100px;
+    }
+    .heading__menu {
+        width: 100%;
+        color: var(--color-white);
+    }
+    .heading__menu__main {
+        display: block;
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .heading__menu__main span {
+        padding: 1rem;
+        font-size: 2.7rem;
+    }
+    .heading__menu__table {
+        position: absolute;
+        width: 100%;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background-color: var(--background-white);
+    }
+    .heading__menu__table__main {
+        width: 96%;
+        margin: 0 auto;
+        flex-wrap: wrap;
+    }
+    .heading__main__icon__list span {
+        font-size: 2.7rem;
+    }
+    .table__main__list a {
+        color: var(--color-h2);
+        padding: 0 1rem;
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+    .table__main__list a:hover {
+        color: #0066cc;
+        background: none;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1360px) {
+    .heading__menu {
+        width: 88%;
+        margin: 0 auto;
+        display: block;
+        height: 95px;
+    }
+    .heading__menu__logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+        color: var(--color-heading);
+    }
+    .heading__menu__table {
+        padding: 0;
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+    }
+    .heading__main__icon {
+        position: absolute;
+        right: 0;
+        top: 4.2rem;
+    }
+    .main__menu__left {
+        display: none !important;
+    }
+    .heading__main__search {
+        top: 9.3rem;
+    }
+}
